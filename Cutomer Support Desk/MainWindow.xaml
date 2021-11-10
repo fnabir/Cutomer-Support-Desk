@@ -1,0 +1,17 @@
+﻿<Window x:Class="Cutomer_Support_Desk.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cutomer_Support_Desk" xmlns:views="clr-namespace:Cutomer_Support_Desk.Views"
+        mc:Ignorable="d"
+        Title="Customer Support Desk" 
+        Height="450"
+        Width="800"
+        MinWidth="350"
+        MinHeight="450"
+        FontSize="14">
+    <Grid Margin="25" MaxWidth="450">
+        <views:LoginView DataContext="{Binding CurrentVM}"/>
+    </Grid>
+</Window>
