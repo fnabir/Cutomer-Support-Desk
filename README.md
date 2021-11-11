@@ -1,7 +1,7 @@
 # Customer Support Desk Software using WPF and C#
 
 
-**User Info:
+**User Info:**
 
 Support Person will login using his/her login information.
 
@@ -9,7 +9,7 @@ If the login is successful, he/she will redirected to Dashboard, where they can 
 
 Then if the username exists, it get "Customer Data" from backend.
 
-**Developer Info:
+**Developer Info:**
 
 No backend is set.
 
