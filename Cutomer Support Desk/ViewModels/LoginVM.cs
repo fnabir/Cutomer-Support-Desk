@@ -35,24 +35,24 @@ namespace Cutomer_Support_Desk.ViewModels
         public ICommand SubmitCommand { get; }
 
 
-        static byte[] GenerateSaltedHash(string userpassword, byte[] salt)
+        static byte[] GenerateSaltedHash(string stringPassword, byte[] salt)
         {
-            byte[] strtobytPass = Encoding.UTF8.GetBytes(userpassword);
+            byte[] bytePassword = Encoding.UTF8.GetBytes(stringPassword);
             HashAlgorithm algorithm = new SHA256Managed();
 
-            byte[] plainTextWithSaltBytes =
-              new byte[strtobytPass.Length + salt.Length];
+            byte[] passwordwithSaltBytes =
+              new byte[bytePassword.Length + salt.Length];
 
-            for (int i = 0; i < strtobytPass.Length; i++)
+            for (int i = 0; i < bytePassword.Length; i++)
             {
-                plainTextWithSaltBytes[i] = strtobytPass[i];
+                passwordwithSaltBytes[i] = bytePassword[i];
             }
             for (int i = 0; i < salt.Length; i++)
             {
-                plainTextWithSaltBytes[strtobytPass.Length + i] = salt[i];
+                passwordwithSaltBytes[bytePassword.Length + i] = salt[i];
             }
 
-            return algorithm.ComputeHash(plainTextWithSaltBytes);
+            return algorithm.ComputeHash(passwordwithSaltBytes);
         }
 
         public static bool Passwordcheck(byte[] inputPassword, byte[] setPassword)
