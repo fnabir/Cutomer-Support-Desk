@@ -1,5 +1,6 @@
 # Customer Support Desk Software using WPF and C#
 
+![image](https://user-images.githubusercontent.com/50192707/141213288-b26ed881-a62b-449d-bfac-a482d7eed2ee.png)
 
 **User Info:**
 
